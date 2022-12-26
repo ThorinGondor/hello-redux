@@ -16,5 +16,13 @@ function reducer(state = {myNum: 1}, action) {
 // 创建仓库，并将 reducer 加入到数据仓库 store
 const store = createStore(reducer)
 
+// 创建动作集合 actions
+const actions = {
+    add: v=> ({
+      type: "ADD",
+      value: v
+    })
+}
+
 // 导出仓库
-export {store}
+export {store, actions}

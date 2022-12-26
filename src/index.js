@@ -2,6 +2,8 @@ import React from 'react'; // React 框架的核心包
 import ReactDOM from 'react-dom/client'; // 专门做渲染的包
 import App from './App';
 import Dash from "./Dash"; // 引入的根组件
+import {Provider} from "react-redux";
+import {store} from "./store/index";
 
 /**
  * 本项目介绍 redux 使用
@@ -23,7 +25,9 @@ root.render(
     // userEffect执行时机
     <>
         <App/>
-        <Dash/>
+        <Provider store = {store}>
+            <Dash/>
+        </Provider>
     </>
 
 );

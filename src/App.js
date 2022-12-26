@@ -1,7 +1,6 @@
 // 引入 redux 数据仓库
 import {store} from './store/index'
 import {useState} from "react";
-import {action} from "mobx";
 
 function App() {
 
